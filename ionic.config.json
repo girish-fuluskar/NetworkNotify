@@ -1,0 +1,7 @@
+{
+  "name": "NetworkNotify",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "ionic-angular"
+}
