@@ -6,6 +6,13 @@ import { StatusBar } from '@ionic-native/status-bar';
 
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
+import { BackgroundMode } from '@ionic-native/background-mode';
+import { Network } from '@ionic-native/network';
+import { LocalNotifications } from '@ionic-native/local-notifications';
+import { InAppBrowser } from '@ionic-native/in-app-browser';
+import { Autostart } from '@ionic-native/autostart';
+import { NetworkSpeedProvider } from '../providers/network-speed/network-speed';
+
 
 @NgModule({
   declarations: [
@@ -24,7 +31,13 @@ import { HomePage } from '../pages/home/home';
   providers: [
     StatusBar,
     SplashScreen,
-    {provide: ErrorHandler, useClass: IonicErrorHandler}
+    {provide: ErrorHandler, useClass: IonicErrorHandler},
+    BackgroundMode,
+    Network,
+    LocalNotifications,
+    InAppBrowser,
+    Autostart,
+    NetworkSpeedProvider
   ]
 })
 export class AppModule {}
